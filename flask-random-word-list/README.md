@@ -9,8 +9,13 @@ You are free to desing the endpoint however You want.
 
 ## Example
 **------**
+
+
 💻 (CLIENT) getRandomWords() -> 🖥 (API)
+
 💻 (CLIENT) <- "apple tree I am Hause beer" <- 🖥 (API)
+
+
 **------**
 
 
