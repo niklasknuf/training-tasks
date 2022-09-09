@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:qr_code_badge/api/api.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 class ResultScreen extends StatefulWidget {
   const ResultScreen({Key? key, required this.token}) : super(key: key);
@@ -26,20 +27,23 @@ class _ResultScreenState extends State<ResultScreen> {
             children: [
               const SizedBox(height: 20),
               Text(
-                'Surname: ${JwtDecoder.decode(widget.token)['surname']}',
+                '${JwtDecoder.decode(widget.token)['lastname']} '
+                ' ${JwtDecoder.decode(widget.token)['surname']}',
                 style: const TextStyle(fontSize: 20),
               ),
-              const SizedBox(height: 20),
-              Text(
-                'Lastname: ${JwtDecoder.decode(widget.token)['lastname']}',
-                style: const TextStyle(fontSize: 20),
+              //TODO: generate QR Code from token
+              QrImage(
+                data: widget.token,
+                version: QrVersions.auto,
+                size: 200.0,
               ),
+
               const SizedBox(height: 20),
               Text(
                 'Role: ${JwtDecoder.decode(widget.token)['role']}',
                 style: const TextStyle(fontSize: 20),
               ),
-              
+
               const SizedBox(height: 20),
               Text(
                 'Validity: ${JwtDecoder.getExpirationDate(widget.token)}',

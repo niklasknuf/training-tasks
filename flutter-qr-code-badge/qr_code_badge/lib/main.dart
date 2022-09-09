@@ -50,8 +50,6 @@ class _MyHomePageState extends State<MyHomePage> {
               //Paste JWT Token here!
               const String yourToken =
                   "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidmlzaXRvciIsInN1cm5hbWUiOiJNYXgiLCJsYXN0bmFtZSI6Ik11c3RlcmZyYXUiLCJzdWIiOiIxMjM0NTY3ODkxMCIsImV4cCI6MTY5NDE4NzMwNiwiaWF0IjoxNTE2MjM5MDIyfQ.oUmc6xHpRa6H4zaGHxyWBvbg-Oi_PVyGySEp_Sp-SLA";
-             
-
               print("Token is valid");
               Navigator.push(
                   context,
